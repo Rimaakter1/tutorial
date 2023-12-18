@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+            background-image: url(images/bg.jpg);
+        }
+
+        /* header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        } */
+
+        nav {
+            background-color: #8b9bf4;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            padding-left: 400px;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #forward {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #backward {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #7484e0;
+            text-align: center;
+            /* position: fixed;
+            bottom: 0; */
+            overflow: hidden;
+            font-weight: 900;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        #central {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(84, 82, 82, 0.1);
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        .border {
+            border: 0.5px solid rgb(103, 103, 174);
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        div {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <header>
+        <h1>Your Tutorial Title</h1>
+    </header> -->
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="#forward">Forward</a>
+        <a href="#backward">Backward</a>
+        <a href="#central">Central</a>
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <div>
+        <section id="forward">
+            <h1 style="text-align: center;">Newton's Forward Difference Interpolation</h1>
+            <section class="border">
+                <h2>Introduction</h2>
+                <p style="text-align: justify;">Numerical interpolation is a technique used to estimate values between
+                    known
+                    data points. It is particularly
+                    useful when
+                    you have a set of discrete data points and need to approximate values at points that fall between
+                    them.
+                    One
+                    commonly
+                    used method for numerical interpolation is Newton's Forward Difference formula.</p>
+            </section>
+
+            <section class="border">
+                <h2>Steps for Newton's Forward Difference Interpolation</h2>
+                <ol>
+                    <li>Collect Data Points</li>
+                    <li>Calculate First Forward Differences</li>
+                    <li>Calculate Second Forward Differences</li>
+                    <li>Continue Forward Differences:</li>
+                    <ul>
+                        <li>Repeat the process to calculate higher-order forward differences until reaching the desired
+                            degree.
+                        </li>
+                    </ul>
+
+                    <li>Apply Newton's Forward Difference Formula</li>
+
+                    <li>Calculate Binomial Coefficients:</li>
+                    <ul>
+                        <li>Compute the binomial coefficients for each term in the formula.</li>
+                    </ul>
+
+                    <li>Substitute and Calculate:</li>
+                    <ul>
+                        <li>Substitute the calculated values into the formula to find the interpolated value</li>
+                    </ul>
+                </ol>
+                <h3 style="text-align: center;">Watch this video for a step-by-step demonstration of <br> Newton's
+                    Backward
+                    Difference Interpolation</h3>
+                <video style="border: 1px solid black;" width="760" height="300" controls>
+                    <source src="videos/Forward Difference.mp4" type="video/mp4">
+                </video>
+            </section>
+        </section>
+    </div>
+    <section id="backward">
+        <h1 style="text-align: center;">Newton's Backward Difference Interpolation</h1>
+        <section class="border">
+            <h2>Introduction</h2>
+            <p style="text-align: justify;">Newton's Backward Difference Interpolation is a numerical method used for
+                approximating values between known data
+                points. It is an extension of Newton's interpolation techniques and is particularly useful when the data
+                points are
+                equally spaced in the reverse order.</p>
+        </section>
+
+        <section class="border">
+            <h2>Steps for Newton's Backward Difference Interpolation</h2>
+            <ol>
+                <li>Collect Data Points:</li>
+
+
+                <li>Calculate First Backward Differences:</li>
+
+
+                <li>Calculate Second Backward Differences:</li>
+
+
+                <li>Continue Backward Differences:</li>
+                <ul>
+                    <li>Repeat the process to calculate higher-order backward differences until reaching the desired
+                        degree.</li>
+                </ul>
+
+                <li>Apply Newton's Backward Difference Formula:</li>
+                <ul>
+                    <li>Use the backward differences in the formula to estimate f(x).</li>
+                </ul>
+
+                <li>Calculate Backward Difference Coefficients:</li>
+                <ul>
+                    <li>Compute the backward difference coefficients for each term in the formula.</li>
+                </ul>
+
+                <li>Substitute and Calculate:</li>
+                <ul>
+                    <li>Substitute the calculated values into the formula to find the interpolated value f(x).</li>
+                </ul>
+            </ol>
+            <h3 style="text-align: center;">Watch this video for a step-by-step demonstration of <br> Newton's Forward
+                Difference Interpolation</h3>
+
+            <video style="border: 1px solid black;" width="760" height="300" controls>
+                <source src="videos/Backward Difference.mp4" type="video/mp4">
+            </video>
+        </section>
+    </section>
+    <section id="central">
+        <h1 style="text-align: center;">Newton's Central Difference Interpolation</h1>
+        <section class="border">
+            <h2>Introduction</h2>
+            <p style="text-align: justify;">Newton's Central Difference Interpolation is another numerical method used
+                for approximating values between known data
+                points. This method is particularly effective when the data points are equally spaced, and it provides
+                an interpolation
+                that involves both forward and backward differences.</p>
+        </section>
+
+        <section class="border">
+            <h2>Steps for Newton's Central Difference Interpolation</h2>
+            <ol>
+                <li>Understand the Central Difference Formula:</li>
+                <ul>
+                    <li>The central difference formula for the first derivative involves evaluating the function at two
+                        points</li>
+                </ul>
+                <li>Choose a Step Size h:</li>
+                <ul>
+                    <li>
+                        Select a small value for the step size h. The choice of h depends on the function and
+                        the desired
+                        level of accuracy. A common approach is to start with a small value and refine as needed.
+                    </li>
+                </ul>
+
+
+
+                <li>Calculate Function Values:</li>
+                <ul>
+                    <li>
+                        Evaluate the function at (x_0 + h) and (x_0 - h). This involves plugging these values into
+                        the function
+                        f(x) to obtain f(x_0 + h) and f(x_0 - h).
+                    </li>
+                </ul>
+
+
+
+                <li>Apply the Central Difference Formula:</li>
+                <ul>
+                    <li>Substitute the obtained function values into the central difference formula.</li>
+                </ul>
+
+
+
+                <li>Compute the Numerical Derivative:</li>
+                <ul>
+                    <li>
+                        Perform the calculations to find the numerical approximation of the derivative f'(x_0) using
+                        the central
+                        difference formula.
+                    </li>
+                </ul>
+                <li>Repeat if Necessary:</li>
+                <ul>
+                    <li>If the accuracy is not satisfactory, consider refining the step size h and repeating the
+                        process.
+                        Smaller step sizes generally lead to more accurate results, but they may also introduce
+                        numerical precision
+                        issues.</li>
+                </ul>
+
+            </ol>
+            <h3 style="text-align: center;">Watch this video for a step-by-step demonstration of <br> Newton's Central
+                Difference Interpolation</h3>
+            <video style="border: 1px solid black;" width="760" height="300" controls>
+                <source src="videos/Central Difference .mp4" type="video/mp4">
+            </video>
+        </section>
+    </section>
+    <footer>
+        <p>Group-4(Section-7BF)</p>
+    </footer>
+
+</body>
+
+</html>
